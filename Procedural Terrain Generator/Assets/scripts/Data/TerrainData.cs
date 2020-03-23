@@ -9,9 +9,9 @@ public class TerrainData : UpdateableData
 
     public float uniformScale = 2f; //adjust if you want a larger map, scales x, y and z axis
 
-    public bool useFlatShading;
+    public bool lowPolyMode;
 
-    public bool useFallOff;
+    public bool generateIsland;
 
     public float meshHeightMultiplier; //scales y axis
     public AnimationCurve meshHeightCurve;

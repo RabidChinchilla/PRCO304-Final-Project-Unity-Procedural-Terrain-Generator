@@ -48,7 +48,7 @@ public class MapGenerator : MonoBehaviour
     {
         get
         {
-            if (terrainData.useFlatShading)
+            if (terrainData.lowPolyMode)
             {
                 return 95;
             }
@@ -70,7 +70,7 @@ public class MapGenerator : MonoBehaviour
         }
         else if (drawMode == DrawMode.Mesh)
         {
-            display.DrawMesh(MeshGenerator.GenerateTerrainMesh(mapData.heightMap, terrainData.meshHeightMultiplier, terrainData.meshHeightCurve, editorPreviewLOD, terrainData.useFlatShading));
+            display.DrawMesh(MeshGenerator.GenerateTerrainMesh(mapData.heightMap, terrainData.meshHeightMultiplier, terrainData.meshHeightCurve, editorPreviewLOD, terrainData.lowPolyMode));
         }
         else if (drawMode == DrawMode.FalloffMap)
         {
@@ -109,7 +109,7 @@ public class MapGenerator : MonoBehaviour
 
     void MeshDataThread(MapData mapData, int lod, Action<MeshData> callback)
     {
-        MeshData meshData = MeshGenerator.GenerateTerrainMesh(mapData.heightMap, terrainData.meshHeightMultiplier, terrainData.meshHeightCurve, lod, terrainData.useFlatShading);
+        MeshData meshData = MeshGenerator.GenerateTerrainMesh(mapData.heightMap, terrainData.meshHeightMultiplier, terrainData.meshHeightCurve, lod, terrainData.lowPolyMode);
         lock (meshDataThreadInfoQueue)
         {
             meshDataThreadInfoQueue.Enqueue(new MapThreadInfo<MeshData>(callback, meshData));
@@ -141,7 +141,7 @@ public class MapGenerator : MonoBehaviour
     {
         float[,] noiseMap = Noise.GenerateNoiseMap(mapChunkSize + 2, mapChunkSize + 2, noiseData.seed, noiseData.noiseScale, noiseData.octaves, noiseData.persistance, noiseData.lacunarity, centre + noiseData.offset, noiseData.normalizeMode); //+2 is to add the border
 
-        if (terrainData.useFallOff)
+        if (terrainData.generateIsland)
         {
             if(falloffMap == null)
             {
@@ -152,7 +152,7 @@ public class MapGenerator : MonoBehaviour
             {
                 for (int x = 0; x < mapChunkSize+2; x++)
                 {
-                    if (terrainData.useFallOff)
+                    if (terrainData.generateIsland)
                     {
                         noiseMap[x, y] = Mathf.Clamp01(noiseMap[x, y] - falloffMap[x, y]);
                     }
