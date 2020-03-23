@@ -194,7 +194,9 @@ public class MeshData
         return Vector3.Cross(sideAB, sideAC).normalized;
     }
 
+#pragma warning disable CS0465 // Introducing a 'Finalize' method can interfere with destructor invocation
     public void Finalize()
+#pragma warning restore CS0465 // Introducing a 'Finalize' method can interfere with destructor invocation
     {
         if (useFlatShading)
         {

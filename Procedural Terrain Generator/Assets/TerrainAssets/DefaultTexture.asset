@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42e952d58ad52343ad3d21a00c1eb00, type: 3}
+  m_Name: DefaultTexture
+  m_EditorClassIdentifier: 
+  autoUpdate: 1
+  layers:
+  - texture: {fileID: 2800000, guid: afa846511af694d45bdbb47f2d3ccb4c, type: 3}
+    tint: {r: 0.13363297, g: 0.25209385, b: 0.8584906, a: 0}
+    tintStrength: 0
+    startHeight: 0
+    blendStrength: 0.054
+    textureScale: 9.13
+  - texture: {fileID: 2800000, guid: bbc652725d674fb4b80d5cb76b9b3ac4, type: 3}
+    tint: {r: 0.7524839, g: 0.754717, b: 0.52331793, a: 0}
+    tintStrength: 0
+    startHeight: 0.136
+    blendStrength: 0.029
+    textureScale: 4.22
+  - texture: {fileID: 2800000, guid: c5e6ee95c74febb4aba4bef54dfa0f8f, type: 3}
+    tint: {r: 0.57968587, g: 0.8113208, b: 0.4783731, a: 0}
+    tintStrength: 0
+    startHeight: 0.218
+    blendStrength: 0.066
+    textureScale: 4.68
+  - texture: {fileID: 2800000, guid: a1795bce6f2f8a84a8d9b7654cd15aa7, type: 3}
+    tint: {r: 0.15138839, g: 0.509434, b: 0.1701391, a: 0}
+    tintStrength: 0
+    startHeight: 0.286
+    blendStrength: 0.136
+    textureScale: 8.38
+  - texture: {fileID: 2800000, guid: 93adc7941805616419d42b30a68ef1e3, type: 3}
+    tint: {r: 0.26415092, g: 0.22355798, b: 0.15574937, a: 0}
+    tintStrength: 0
+    startHeight: 0.532
+    blendStrength: 0.169
+    textureScale: 16.61
+  - texture: {fileID: 2800000, guid: db43c90f4d541cf459cd392fde1bdcea, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 0}
+    tintStrength: 0
+    startHeight: 0.73
+    blendStrength: 0.183
+    textureScale: 8.12
