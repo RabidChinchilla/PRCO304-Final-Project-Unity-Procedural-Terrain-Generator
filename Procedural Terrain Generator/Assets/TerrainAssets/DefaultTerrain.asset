@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoUpdate: 1
   uniformScale: 2
-  useFlatShading: 0
-  useFallOff: 1
-  meshHeightMultiplier: 40
+  lowPolyMode: 0
+  generateIsland: 0
+  meshHeightMultiplier: 43
   meshHeightCurve:
     serializedVersion: 2
     m_Curve:

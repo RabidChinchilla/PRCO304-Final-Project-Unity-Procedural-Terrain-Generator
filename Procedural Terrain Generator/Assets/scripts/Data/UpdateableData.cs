@@ -7,6 +7,8 @@ public class UpdateableData : ScriptableObject
     public event System.Action OnValuesUpdated;
     public bool autoUpdate;
 
+    #if UNITY_EDITOR
+    //using this wont allow you to build so the #if makes it so that you only use this code if you're in the unity editor
     protected virtual void OnValidate()
     {
         if (autoUpdate)
@@ -23,5 +25,6 @@ public class UpdateableData : ScriptableObject
             OnValuesUpdated();
         }
     }
+    #endif
 
 }

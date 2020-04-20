@@ -19,7 +19,9 @@ public class NoiseData : UpdateableData
     public int seed;
     public Vector2 offset;
 
-    protected override void OnValidate() //this is to make sure all OnValidates run
+#if UNITY_EDITOR
+
+    protected override void OnValidate() //this is to make sure all OnValidates run8
     {
         if (lacunarity < 1)
         {
@@ -33,4 +35,5 @@ public class NoiseData : UpdateableData
 
         base.OnValidate();
     }
+#endif
 }
