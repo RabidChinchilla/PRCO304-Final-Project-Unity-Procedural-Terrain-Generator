@@ -28,7 +28,7 @@ public class MeshSettings : UpdateableData
     {
         get
         {
-            return supportedChunkSizes[(lowPolyMode) ? flatshadedChunkSizeIndex : chunkSizeIndex] + 1;
+            return supportedChunkSizes[(lowPolyMode) ? flatshadedChunkSizeIndex : chunkSizeIndex] + 5;
         }
     }
 
