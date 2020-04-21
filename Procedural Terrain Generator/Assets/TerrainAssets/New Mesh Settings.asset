@@ -9,14 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04d297f3fb2efe2408cf85b907916a5e, type: 3}
-  m_Name: DefaultNoise
+  m_Script: {fileID: 11500000, guid: 25b07afedc089404580e46199609664a, type: 3}
+  m_Name: New Mesh Settings
   m_EditorClassIdentifier: 
-  autoUpdate: 1
-  normalizeMode: 0
-  noiseScale: 40.3
-  octaves: 4
-  persistance: 0.5
-  lacunarity: 2
-  seed: 0
-  offset: {x: 0, y: 0}
+  autoUpdate: 0
+  meshScale: 1
+  lowPolyMode: 0
+  chunkSizeIndex: 3
+  flatshadedChunkSizeIndex: 0
