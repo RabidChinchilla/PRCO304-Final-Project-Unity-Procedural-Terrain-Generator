@@ -17,11 +17,11 @@ MonoBehaviour:
     normalizeMode: 1
     scale: 50
     octaves: 6
-    persistance: 0.47
-    lacunarity: 2
+    persistance: 0.495
+    lacunarity: 1.85
     seed: 0
     offset: {x: 0, y: 0}
-  generateIsland: 1
+  generateIsland: 0
   heightMultipier: 50
   heightCurve:
     serializedVersion: 2
@@ -29,35 +29,44 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.35514864
-      value: 0.3061196
-      inSlope: 0.6421368
-      outSlope: 0.6421368
+      time: 0.17134762
+      value: 0.006326413
+      inSlope: 0.044402882
+      outSlope: 0.044402882
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.7179043
-      value: 0.60441786
-      inSlope: 0.55877113
-      outSlope: 0.55877113
+      time: 0.32814905
+      value: 0.026052501
+      inSlope: 0.37138206
+      outSlope: 0.37138206
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.41067013
+      value: 0.11486671
+      inSlope: 0.45906988
+      outSlope: 0.45906988
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0534668
+      value: 0.77708435
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
