@@ -4,6 +4,9 @@ using UnityEngine;
 
 public static class HeightMapGenerator
 {
+    static float[,] fallOffMap;
+
+
     public static HeightMap GenerateHeightMap(int width, int height, HeightMapSettings settings, Vector2 sampleCentre)
     {
         float[,] values = Noise.GenerateNoiseMap(width, height, settings.noiseSettings, sampleCentre);
@@ -13,13 +16,21 @@ public static class HeightMapGenerator
         float minValue = float.MaxValue;
         float maxValue = float.MinValue;
 
-        for(int i = 0; i < width; i++)
+        if (settings.generateIsland)
+        {
+            if (fallOffMap == null)
+            {
+                fallOffMap = FallOffGenerator.GenerateFalloffMap(width);
+            }
+        }
+
+        for (int i = 0; i < width; i++)
         {
             for(int j = 0; j < height; j++)
             {
-                values[i, j] *= heightCurve_threadsafe.Evaluate(values[i, j]) * settings.heightMultipier;
+                values[i, j] *= heightCurve_threadsafe.Evaluate(values[i, j] - (settings.generateIsland ? fallOffMap[i, j] : 0)) * settings.heightMultipier;
 
-                if(values[i,j] > maxValue)
+                if (values[i,j] > maxValue)
                 {
                     maxValue = values[i, j];
                 }
