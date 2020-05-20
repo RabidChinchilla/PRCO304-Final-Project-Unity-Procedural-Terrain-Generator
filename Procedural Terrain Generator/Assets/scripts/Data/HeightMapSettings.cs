@@ -9,7 +9,9 @@ public class HeightMapSettings : UpdateableData
 
     public bool generateIsland;
 
+
     public float heightMultipier; //scales y axis
+
     public AnimationCurve heightCurve;
 
     public float minHeight
