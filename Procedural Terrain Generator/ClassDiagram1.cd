@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FallOffGenerator">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Assets\scripts\FallOffGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeightMapSettings" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAgAAAAAIAAAEAAAAAAAAAAAAAAACAAAAAAQA=</HashCode>
+      <FileName>Assets\scripts\Data\HeightMapSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeshSettings" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAIAgAAAAADAAAAAAAACAAAAAgIwAAAA=</HashCode>
+      <FileName>Assets\scripts\Data\MeshSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TextureData" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAEAAAAAAACAAAIAAAAAAEAAAAAIBACAAAA=</HashCode>
+      <FileName>Assets\scripts\Data\TextureData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpdateableData" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAEAQAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Assets\scripts\Data\UpdateableData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeightMapGenerator">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\scripts\HeightMapGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HideOnPlay">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\scripts\HideOnPlay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapGenerator">
+    <Position X="15" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\scripts\MapGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapPreview">
+    <Position X="4.5" Y="3.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="MapPreview.DrawMode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\scripts\MapPreview.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAgAAQAAAQAAgEATAQEAAAAoCAAEAAAAAAAAAA=</HashCode>
+      <FileName>Assets\scripts\MapPreview.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeshGenerator">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\scripts\MeshGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeshData">
+    <Position X="11.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAACjAACAAAAAAQQAAAAUgiAAAAAgAAEAIgA=</HashCode>
+      <FileName>Assets\scripts\MeshGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Noise">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Noise.NormalizeMode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\scripts\Noise.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\scripts\Noise.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoiseSettings">
+    <Position X="6.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACQIAAAAAAAQAAAAAEAAEBCAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\scripts\Noise.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerrainChunk">
+    <Position X="17" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAhAAAAIQIEDAAQCAACAiAiUBAEGAAACACQAAAEAA=</HashCode>
+      <FileName>Assets\scripts\TerrainChunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LODMesh">
+    <Position X="15" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAgABBAgAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\scripts\TerrainChunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TerrainGenerator">
+    <Position X="13.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAKQBECAggAQAAACAgUAAADAAAAAAAQQAAAA=</HashCode>
+      <FileName>Assets\scripts\TerrainGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TextureGenerator">
+    <Position X="2.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\scripts\TextureGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThreadedDataRequester">
+    <Position X="8" Y="3.75" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="ThreadedDataRequester.ThreadInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\scripts\ThreadedDataRequester.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAIAAAAAAAAAEBCAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\scripts\ThreadedDataRequester.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="HeightMap">
+    <Position X="9.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\scripts\HeightMapGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LODInfo">
+    <Position X="9.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAACAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\scripts\TerrainGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -24,15 +24,6 @@ public class MapPreviewEditor : Editor
             mapPreview.DrawMapInEditor();
 
 
-
-
-
-
-
-
-
-
-
         }
     }
 
