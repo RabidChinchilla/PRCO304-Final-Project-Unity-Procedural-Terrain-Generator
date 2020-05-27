@@ -12,6 +12,7 @@ public class UpdateableDataEditor : Editor
 
         UpdateableData data = (UpdateableData)target;
 
+
         if (GUILayout.Button("Update"))
         {
             data.NotifyOfUpdatedValues();
