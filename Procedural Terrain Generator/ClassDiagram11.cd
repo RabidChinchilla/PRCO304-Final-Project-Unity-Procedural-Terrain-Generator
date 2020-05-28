@@ -14,5 +14,12 @@
       <FileName>Assets\editor\UpdateableDataEditor.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="HeightMapSettingsEditor">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\editor\HeightMapSettingsEditor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
