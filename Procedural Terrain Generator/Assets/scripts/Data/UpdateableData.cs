@@ -19,7 +19,7 @@ public class UpdateableData : ScriptableObject
 
     public void NotifyOfUpdatedValues()
     {
-        UnityEditor.EditorApplication.update -= NotifyOfUpdatedValues;
+        UnityEditor.EditorApplication.update -= NotifyOfUpdatedValues; //makes sure it's unsubscribed before it is used again
         if (OnValuesUpdated != null)
         {
             OnValuesUpdated();

@@ -7,7 +7,7 @@ using System.Threading;
 public class MapGenerator : MonoBehaviour
 {
     
-
+    // not in use
 
     float[,] falloffMap;
 

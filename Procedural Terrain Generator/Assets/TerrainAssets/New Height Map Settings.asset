@@ -15,11 +15,11 @@ MonoBehaviour:
   autoUpdate: 1
   noiseSettings:
     normalizeMode: 1
-    scale: 39
-    octaves: 5
-    persistance: 0.5
+    scale: 44
+    octaves: 4
+    persistance: 0.434
     lacunarity: 2
-    seed: 274659
+    seed: 795149
     offset: {x: 0, y: 0}
   generateIsland: 0
   heightMultipier: 35

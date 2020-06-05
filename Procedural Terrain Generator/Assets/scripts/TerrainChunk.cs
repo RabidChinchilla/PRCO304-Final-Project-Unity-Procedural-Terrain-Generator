@@ -40,7 +40,7 @@ public class TerrainChunk
 		this.meshSettings = meshSettings;
 		this.viewer = viewer;
 
-		sampleCentre = coord * meshSettings.meshWorldSize / meshSettings.meshScale;
+		sampleCentre = coord * meshSettings.meshWorldSize / meshSettings.meshScale; //position in the world
 		Vector2 position = coord * meshSettings.meshWorldSize;
 		bounds = new Bounds(position, Vector2.one * meshSettings.meshWorldSize);
 
@@ -55,7 +55,7 @@ public class TerrainChunk
 		meshObject.transform.parent = parent;
 		SetVisible(false);
 
-		lodMeshes = new LODMesh[detailLevels.Length];
+		lodMeshes = new LODMesh[detailLevels.Length]; //uses user defined LOD array
 		for (int i = 0; i < detailLevels.Length; i++)
 		{
 			lodMeshes[i] = new LODMesh(detailLevels[i].lod);

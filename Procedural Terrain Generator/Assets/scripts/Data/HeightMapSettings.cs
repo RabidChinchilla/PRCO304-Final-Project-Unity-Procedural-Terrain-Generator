@@ -32,7 +32,7 @@ public class HeightMapSettings : UpdateableData
 
 #if UNITY_EDITOR
 
-    protected override void OnValidate() //this is to make sure all OnValidates run8
+    protected override void OnValidate() //this is to make sure all OnValidates run
     {
         noiseSettings.ValidateValues();
 

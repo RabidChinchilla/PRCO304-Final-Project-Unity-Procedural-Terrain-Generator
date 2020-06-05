@@ -15,7 +15,7 @@ public class ThreadedDataRequester : MonoBehaviour
         instance = FindObjectOfType<ThreadedDataRequester>();
     }
 
-    public static void RequestData(Func<object> generateData, Action<object> callback)
+    public static void RequestData(Func<object> generateData, Action<object> callback) //starts thread
     {
         ThreadStart threadStart = delegate
         {
@@ -25,7 +25,7 @@ public class ThreadedDataRequester : MonoBehaviour
         new Thread(threadStart).Start();
     }
 
-    void DataThread(Func<object> generateData, Action<object> callback)
+    void DataThread(Func<object> generateData, Action<object> callback) //gets data
     {
         object data = generateData();
         lock (dataQueue) //stops the queue from being accessed by multiple threads at once
@@ -41,7 +41,7 @@ public class ThreadedDataRequester : MonoBehaviour
         {
             for (int i = 0; i < dataQueue.Count; i++)
             {
-                ThreadInfo threadInfo = dataQueue.Dequeue();
+                ThreadInfo threadInfo = dataQueue.Dequeue(); //gets next item in queue
                 threadInfo.callback(threadInfo.parameter);
             }
         }

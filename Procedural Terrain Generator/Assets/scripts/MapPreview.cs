@@ -58,7 +58,7 @@ public class MapPreview : MonoBehaviour
     public void DrawTexture(Texture2D texture)
     {
         
-
+        //shared because it needs to be generated in the editor
         textureRenderer.sharedMaterial.mainTexture = texture;
         textureRenderer.transform.localScale = new Vector3(texture.width, 1, texture.height) /10f; //divide because map was too big
 
@@ -76,7 +76,7 @@ public class MapPreview : MonoBehaviour
     }
 
     void OnValuesUpdated()
-    {
+    {//update map when values change as long as the game isn't playing
         if (!Application.isPlaying)
         {
             DrawMapInEditor();
@@ -87,7 +87,7 @@ public class MapPreview : MonoBehaviour
     {
         textureData.ApplyToMaterial(terrainMaterial);
     }
-    void OnValidate()
+    void OnValidate() //updates in editor when a value is changed in inspector
     {
         if (meshSettings != null)
         {

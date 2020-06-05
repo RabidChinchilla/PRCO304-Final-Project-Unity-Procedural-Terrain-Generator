@@ -11,7 +11,7 @@ public static class HeightMapGenerator
     {
         float[,] values = Noise.GenerateNoiseMap(width, height, settings.noiseSettings, sampleCentre);
 
-        AnimationCurve heightCurve_threadsafe = new AnimationCurve(settings.heightCurve.keys);
+        AnimationCurve heightCurve_threadsafe = new AnimationCurve(settings.heightCurve.keys); //gets all keys defined in the animation curve
 
         float minValue = float.MaxValue;
         float maxValue = float.MinValue;
@@ -28,6 +28,7 @@ public static class HeightMapGenerator
         {
             for(int j = 0; j < height; j++)
             {
+                //adjusts values by evaluating to the height curve and multiplying by the height multiplier
                 values[i, j] *= heightCurve_threadsafe.Evaluate(values[i, j] - (settings.generateIsland ? fallOffMap[i, j] : 0)) * settings.heightMultipier;
 
                 if (values[i,j] > maxValue)

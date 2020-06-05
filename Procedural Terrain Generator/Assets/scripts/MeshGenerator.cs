@@ -27,7 +27,7 @@ public static class MeshGenerator
             for (int x = 0; x < numVerticesPerLine; x++)
             {
                 bool isOutOfMeshVertex = y == 0 || y == numVerticesPerLine - 1 || x == 0 || x == numVerticesPerLine - 1;
-                bool isSkippedVertex = x > 2 && x < numVerticesPerLine - 3 && y > 2 && y < numVerticesPerLine - 3 && ((x - 2) % skipIncrement != 0 || (y - 2) % skipIncrement !=0);
+                bool isSkippedVertex = x > 2 && x < numVerticesPerLine - 3 && y > 2 && y < numVerticesPerLine - 3 && ((x - 2) % skipIncrement != 0 || (y - 2) % skipIncrement !=0); //finds out if the vertex has been skipped based on LOD
 
                 if (isOutOfMeshVertex)
                 {
@@ -209,7 +209,7 @@ public class MeshData
 
         for (int i = 0; i < vertexNormals.Length; i++)
         {
-            vertexNormals[i].Normalize();
+            vertexNormals[i].Normalize(); //keeps size but sets length to 1
         }
 
         return vertexNormals;
@@ -217,14 +217,14 @@ public class MeshData
 
     Vector3 SurfaceNormalFromIndices(int indexA, int indexB, int indexC)
     {
-        Vector3 pointA = (indexA < 0) ? outOfMeshVertices[-indexA-1] : vertices[indexA];
+        Vector3 pointA = (indexA < 0) ? outOfMeshVertices[-indexA - 1] : vertices[indexA];
         Vector3 pointB = (indexB < 0) ? outOfMeshVertices[-indexB - 1] : vertices[indexB];
         Vector3 pointC = (indexC < 0) ? outOfMeshVertices[-indexC - 1] : vertices[indexC];
 
         //using cross product
         Vector3 sideAB = pointB - pointA;
         Vector3 sideAC = pointC - pointA;
-        return Vector3.Cross(sideAB, sideAC).normalized;
+        return Vector3.Cross(sideAB, sideAC).normalized; //normalizes cross product
     }
 
 #pragma warning disable CS0465 // Introducing a 'Finalize' method can interfere with destructor invocation
@@ -243,7 +243,7 @@ public class MeshData
 
     void BakeNormals() //calculate normals was moved here because it was causing lag spikes
     {
-        bakedNormals = CalculateNormals(); //own version of recalculate normals to stop poor looking seems
+        bakedNormals = CalculateNormals(); //own version of recalculate normals to stop poor looking seams
     }
 
     void FlatShading()

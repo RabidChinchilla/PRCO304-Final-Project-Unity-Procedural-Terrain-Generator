@@ -27,7 +27,7 @@ public static class FallOffGenerator
     {
         float a = 3f;
         float b = 2.2f;
-
+        //mathf.Pow returns float to the power of another float
         return Mathf.Pow(value, a) / (Mathf.Pow(value, a) + Mathf.Pow(b - b * value, a)); // helps return a better falloff map that creates larger islands
     }
 }

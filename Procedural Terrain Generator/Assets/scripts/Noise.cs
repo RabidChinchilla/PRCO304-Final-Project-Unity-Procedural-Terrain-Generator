@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class Noise
+public static class Noise //doesn't inherit from monobehaviour because it's not attached to a game object
 {
     public enum NormalizeMode { Local, Global };
 
@@ -19,7 +19,7 @@ public static class Noise
 
         for (int i = 0; i < settings.octaves; i++)
         {
-            float offsetX = prng.Next(-100000, 100000) + settings.offset.x + sampleCentre.x;
+            float offsetX = prng.Next(-100000, 100000) + settings.offset.x + sampleCentre.x; //adds users own offset incase they want to scroll through it themselves
             float offsetY = prng.Next(-100000, 100000) - settings.offset.y - sampleCentre.y;
             octaveOffsets[i] = new Vector2(offsetX, offsetY);
 
@@ -31,7 +31,7 @@ public static class Noise
         float minLocalNoiseHeight = float.MaxValue;
 
         float halfWidth = mapWidth / 2f;
-        float halfHeight = mapHeight / 2f; // neeeded to zoom height map to the center
+        float halfHeight = mapHeight / 2f; // neeeded to zoom height map to the center when changing noise scale
 
         for (int y = 0; y < mapHeight; y++)
         {
@@ -43,6 +43,7 @@ public static class Noise
 
                 for (int i = 0; i < settings.octaves; i++)
                 {
+                    //at what points we get the height values from
                     float sampleX = (x - halfWidth + octaveOffsets[i].x) / settings.scale * frequency;
                     float sampleY = (y - halfHeight + octaveOffsets[i].y) / settings.scale * frequency;
 
@@ -114,9 +115,9 @@ public class NoiseSettings
 
     public void ValidateValues()
     {
-        scale = Mathf.Max(scale, 0.01f); //chooses the highest value so if it goes below 0 it will automatically go back to 0.01
+        scale = Mathf.Max(scale, 0.01f); //returns the highest value so if it goes below 0 it will automatically go back to 0.01
         octaves = Mathf.Max(octaves, 1);
         lacunarity = Mathf.Max(lacunarity, 1);
-        persistance = Mathf.Clamp01(persistance);
+        persistance = Mathf.Clamp01(persistance); //clamps the value between 0 and 1
     }
 }
